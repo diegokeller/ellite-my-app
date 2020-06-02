@@ -1,0 +1,32 @@
+
+<p>
+    Título da mensagem: <input type="text" [(ngModel)]="titulo" (change)="mudou()" (click)="clicou()">
+</p>
+<p>
+    Mensagem: <textarea cols="30" rows="10" [(ngModel)]="mensagem"></textarea>
+</p>
+
+<h2>
+    {{titulo}}
+</h2>
+    
+<p>
+    {{mensagem}}
+</p>
+
+<hr>
+
+<h2>Calculadora</h2>
+<input type="number" [(ngModel)]="n1" (change)="calcular()">
++
+<input type="number" [(ngModel)]="n2" (change)="calcular()">
+=
+<span>{{resultado}}</span>
+
+<hr>
+
+<app-botao nome="Salvar contato" cor="green" (clicou)="salvarContato()"></app-botao>
+
+<app-botao nome="Excluir" cor="red"></app-botao>
+
+<app-botao nome="Confirmar" cor="blue"></app-botao>
